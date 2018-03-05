@@ -1,0 +1,98 @@
+.citacao-bio {
+    position: relative;
+    transition-delay: 1s, 0s;
+    transition: box-shadow 1s, transform 1s;
+    background-color: #D9E5E3;
+    border: .5rem solid #C2CCCA;
+    padding: 1rem;
+    margin: 1rem 2rem;
+    width: 12.5rem;
+    box-sizing: border-box;
+}
+.citacao-bio::before{
+    content: '"';
+    font-size: 10em;
+    color: rgba(0, 0, 0, .4);
+    position: absolute;
+    line-height: .8;
+}
+.citacao-bio:nth-last-of-type(odd):hover,
+.citacao-bio:nth-last-of-type(odd):focus{
+    z-index: 3;
+    box-shadow: 0 0 0 99999px rgba(0,0,0,.6);
+    transform: scale(1.2) translate(50%) rotateZ(-5deg);
+    transform-origin: 0 0;
+    animation-play-state: paused;
+    transition-delay: 0s, 1s;
+}
+.citacao-bio:nth-last-of-type(even):hover,
+.citacao-bio:nth-last-of-type(even):focus{
+    z-index: 3;
+    box-shadow: 0 0 0 99999px rgba(0,0,0,.6);
+    transform: scale(1.2) translate(-50%) rotateZ(5deg);
+    transform-origin: 0 0;
+    animation-play-state: paused;
+    transition-delay: 0s, 1s;
+}
+.citacao-bio:nth-last-of-type(odd){
+    float: left;
+    margin-left: 0;
+}
+.citacao-bio:nth-last-of-type(even){
+    float: right;
+    margin-right: 0;
+}
+.container>p::first-letter{
+    font-size: 2em;
+    font-weight: bold;
+    color: #3C1D3D;
+    text-shadow: 1px 1px #000;
+    margin-right: .2ch;
+    line-height: 1;
+}
+.ability-table{
+    margin: 1rem 0;
+    border-collapse: separate;
+    border-spacing: .25rem;
+}
+.ability-table thead th{
+    background-color: #3C1D3D;
+    color: #FFFFFF;
+    font-weight: bold;
+}
+.ability-table th,
+.ability-table td{
+    padding: 1rem;
+}
+.ability-table th {
+    background-color: #851944;
+    color: white;
+}
+.ability-table td {
+    background-color: #EEE;
+}
+.ability-table [colspan] {
+    text-align: center;
+    font-style: italic;
+    vertical-align: middle;
+}
+.citacao-bio{
+    animation: quica2 1s infinite;
+    animation-direction: alternate;
+    animation-timing-function: ease-in;
+    /* animation: quica 1s infinite; */
+}
+@keyframes quica {
+    from {
+        top: 0;
+    }
+    90% {
+        transform: rotate(-2deg);
+    }
+    95% {
+        transform: rotate(2deg);
+    }
+    to {
+        top: 1em;
+    }
+}

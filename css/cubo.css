@@ -1,0 +1,46 @@
+.cubo{ 
+    position: relative; 
+    transform-style: preserve-3d;
+    transform-origin: -50% -50%;
+    top: 100px;
+    left: 100px;
+    width: 200px;
+    height: 200px;
+    transform: rotateX(-10deg) rotateY(10deg);
+} 
+.face{
+    text-align: center;
+    display: block;
+    width: 150px; 
+    height: 150px; 
+    position: absolute;
+    top: 0;
+    left: 0;
+} 
+.face-blue{
+    transform: translateZ(100px); 
+    background-color: blue; 
+} 
+.face-green{ 
+    transform: rotateY(90deg) translateZ(75px) translateX(-25px);
+    background-color: green; 
+} 
+.face-orange{ 
+    transform: rotateX(180deg) translateZ(50px);
+    background-color: orange; 
+} 
+.face-yellow{ 
+    transform: rotateY(-90deg) translateX(25px) translateZ(75px);
+    background-color: yellow; 
+} 
+.face-red{ 
+    transform: rotateX(90deg) translateY(25px) translateZ(-75px);
+    background-color: red; 
+} 
+.face-purple{
+    transform: rotateX(-90deg) translateY(-25px) translateZ(-75px);
+    background-color: purple;
+}
+body{
+    perspective: 1000px;
+}
